@@ -9,7 +9,7 @@ class Market(models.Model):
     password = models.CharField(max_length=255, default='default_password_value')
 
     def __str__(self):
-        return f"{self.market_name}"
+        return f"{self.name}"
 
 class Delivery(models.Model):
     delivery_name = models.CharField(max_length=64)
@@ -47,7 +47,7 @@ class Order(models.Model):
     order_date = models.DateTimeField(auto_now_add=True)
     total_price = models.DecimalField(max_digits=10, decimal_places=2)
     is_delivered = models.BooleanField(default=False)
-    products = models.ForeignKey(Product, related_name="products")
+    products = models.ForeignKey(Product, related_name="products", on_delete=models.CASCADE,default=0)
     
     def __str__(self):
         return f"Order {self.id} by {self.client.client_name}"

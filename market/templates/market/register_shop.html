@@ -10,7 +10,8 @@ Register your Shop!
   
     <div class="register-container">
         <h1>Sign up and Start selling !</h1>
-        <form action="" method="post">
+        <form action="{% url 'create_shop'  %}" method="post">
+            {% csrf_token %}
             <div class="input-group">
                 <input type="email" name="email" required placeholder="example@email.com" autofocus>
                 <label>Official Email of your shop</label>
@@ -24,11 +25,11 @@ Register your Shop!
                 <label>Location of your shop</label>
             </div>
             <div class="input-group">
-                <input type="tel" name="phone" required pattern="[0-9]{2}-[0-9]{3} [0-9]{3}" placeholder="00-000 000">
+                <input type="tel" name="phone" required pattern="[0-9]{2}[0-9]{3}[0-9]{3}" placeholder="00-000 000">
                 <label>Phone number of your shop </label>
             </div>
             <div class="input-group">
-                <input type="text" name="Tax_id" required pattern="[0-9]{3} [0-9]{3} [0-9]{3}" placeholder="000 000 000">
+                <input type="text" name="Tax_id" required pattern="[0-9]{3}[0-9]{3}[0-9]{3}" placeholder="000 000 000">
                 <label>Your shop Tax ID</label>
             </div>
             <div class="input-group">
