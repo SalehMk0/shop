@@ -1,0 +1,48 @@
+{% extends "market/navbar.html" %}
+
+{% load static %}
+{% block title %}
+Shop Now !
+{% endblock %}
+{% block body %}
+
+<div class="banner">
+    
+    <img src="{% static 'market/images/banner2-min.png '%}" alt="banner-image">
+   
+</div>
+    <div class="menu-text">
+        <h1>Let's Start</h1>
+    </div>
+<div class="main-menu">
+   
+    <div class="menu-item">
+        <div class="menu-item-content">
+            <img src="{% static 'market/images/delivery.png '%}" alt="Icon 1">
+            <h2>Delivery</h2>
+            <p>Deliver Orders, use your motorbike!</p>
+            <button>Register</button>
+        </div>
+    </div>
+    
+    <div class="menu-item">
+        <div class="menu-item-content">
+            <img src="{% static 'market/images/shop2.png '%}" alt="Icon 2">
+            <h2>Shop</h2>
+            <p>Sell and deliver goods!</p>
+            <a href="{% url 'register_shop' %}"><button>Register</button></a>
+        </div>
+    </div>
+   
+    <div class="menu-item">
+        <div class="menu-item-content">
+            <img src="{% static 'market/images/Client.png' %}" alt="Icon 3">
+            <h2>Client</h2>
+            <p>Let's Shop !</p>
+            <button>Shop Now</button>
+        </div>
+    </div>
+</div>
+
+
+{% endblock %}
