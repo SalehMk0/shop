@@ -33,6 +33,7 @@ class Client(models.Model):
 
 class Product(models.Model):
     product_name = models.CharField(max_length=64)
+    category = models.CharField(max_length=64, default="Others")
     product_price = models.DecimalField(max_digits=10, decimal_places=2)
     product_description = models.TextField()
     product_stocks = models.IntegerField(default=0)
