@@ -13,16 +13,31 @@ Sign in
         <form action="{% url 'login' %}" method="post">
             {% csrf_token %}
             <div class="input-group">
-                <input type="email" name="email" required placeholder="example@email.com" autofocus>
+                <input type="email" name="email" required  autofocus>
                 <label>Email</label>
             </div>
             <div class="input-group">
-                <input type="password" name="password" required placeholder="********" autofocus>
+                <input type="password" name="password" required  autofocus>
                 <label>Password</label>
             </div>
+            <div class="input-group">
+                
+                <select name="user_type" required >
+                    <option value="" selected  disabled>-- Select User Type --</option>
+                    <option value="client">Client</option>
+                    <option value="shop">Shop</option>
+                    <option value="delivery">Delivery</option>
+                </select>
+            </div>
+            
             <input type="submit" value="Login" class="login-submit">
         </form>
-        <p>Don't have an account? <a href="{% url 'register_shop' %}">Register here</a></p>
+        <p>Don't have an account? <u><a href="{% url 'register_shop' %}">Register here</a></u></p>
     </div>
+    <div class="image-container" style="position: relative;">
+        <img src="{% static 'market/images/login-image.png' %}" alt="First Image" class="first-image">
+        <img src="{% static 'market/images/login-img.png' %}" alt="Second Image" class="second-image">
+      </div>
 </div>
+
 {% endblock %}

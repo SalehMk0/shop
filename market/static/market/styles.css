@@ -22,6 +22,7 @@ body {
             justify-content: space-between;
             align-items: center;
             padding: 10px 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
         }
 
         .navbar img {
@@ -306,6 +307,7 @@ footer {
 .register-container h1 {
     color: #0d2e49;
     margin-bottom: 30px;
+    
 }
 
 .register-container form {
@@ -357,7 +359,7 @@ footer {
     border-radius: 4px;
     cursor: pointer;
     width: 80%;
-    font-size: 16px;
+    font-size: large;
     transition: background-color 0.3s ease;
 }
 
@@ -398,4 +400,134 @@ footer {
 }
 
 
+  
+.login-page {
+    display: flex;
+    justify-content: left;
+    align-items: left;
+    flex-direction: row;
+    padding: 60px 20px; /* Add padding to create space at the top and bottom */
+  }
+  
+  /* Login Container Styles */
+  .login-container {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: -5px 5px 15px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+    margin: 20px 0; /* Add margin to create space between the container and other elements */
+  }
+  
+  .login-container h1 {
+    
+    font-size: 35px;
+    color: #0d2e49;
+  }
+  
+  .login-container .input-group {
+    margin-bottom: 30px;
+    position: relative;
+    width:100%;
+  }
+  
+  .login-container .input-group input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-size: 16px;
+  }
+  .login-container .input-group select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-size: 16px;
+  }
+  
+  .login-container .input-group label {
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    transform: translateY(-50%);
+    background-color: #fff;
+    padding: 0 5px;
+    font-size: 14px;
+    color: #aaa;
+    transition: all 0.3s;
+  }
+  
+  .login-container .input-group input:focus + label,
+  .login-container .input-group input:not(:placeholder-shown) + label {
+    top: -10px;
+    left: 5px;
+    font-size: 12px;
+    color: #333;
+  }
+  .input-group input:focus {
+    border-color: #ff6600; /* Change the border color to your desired color */
+  }
+  
+  .input-group input:focus + label {
+    color: #ff6600; /* Change the label color to your desired color */
+  }
+  .login-container .login-submit {
+    width: 50%;
+    padding: 10px;
+    background-color: #ff6600;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    font-size: large;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .login-container .login-submit:hover {
+    background-color: #0d2e49;
+  }
+  
+  .login-container p {
+    margin-top: 20px;
+    font-size: 14px;
+    color: #333;
+  }
+  
+  .login-container p a {
+    color: #0d2e49;
+    text-decoration: none;
+    transition: color 0.3s;
+  }
+  
+  .login-container p a:hover {
+    color: #ff6600;
+  }
+  
 
+
+.image-container img {
+     width: 100%;
+    flex: 1;
+    padding: 20px;
+    border-radius: 10px;
+    margin-left: 20px;
+    transition: opacity 0.3s ease;
+    cursor: pointer;
+  }
+  .image-container img.second-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+  }
+  .image-container:hover img.second-image {
+    opacity: 1;
+  }
+  .image-container:hover img.first-image {
+    opacity: 0;
+  }
