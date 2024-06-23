@@ -8,7 +8,7 @@ def index(request):
     return render(request, "market/index.html")
 
 def login(request):
-    pass
+    return render(request, "market/signin.html")
 def register_shop(request):
     return render(request, "market/register_shop.html")
 

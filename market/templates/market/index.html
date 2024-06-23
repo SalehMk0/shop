@@ -10,8 +10,10 @@ Shop Now !
     
     <img src="{% static 'market/images/banner2-min.png '%}" alt="banner-image">
    
-</div>
+</div><div class="wave">
+        </div>
     <div class="menu-text">
+        
         <h1>Let's Start</h1>
     </div>
 <div class="main-menu">
@@ -34,7 +36,7 @@ Shop Now !
         </div>
     </div>
    
-    <div class="menu-item">
+    <div class="menu-item" id="client">
         <div class="menu-item-content">
             <img src="{% static 'market/images/Client.png' %}" alt="Icon 3">
             <h2>Client</h2>
@@ -43,6 +45,15 @@ Shop Now !
         </div>
     </div>
 </div>
+<script>
+    document.querySelector('#client').onmouseover = function() {
+        this.style.color = "#ff6600";
+    };
+    document.querySelector('#client').onmouseout = function() {
+        this.style.color = "";
+    };
+</script>
+
 
 
 {% endblock %}

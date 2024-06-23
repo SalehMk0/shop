@@ -1,0 +1,28 @@
+{% extends "market/navbar.html" %}
+{% load static %}
+
+{% block title %}
+Sign in
+{% endblock %}
+
+
+{% block body %}
+<div class="login-page">
+    <div class="login-container">
+        <h1>Login</h1>
+        <form action="{% url 'login' %}" method="post">
+            {% csrf_token %}
+            <div class="input-group">
+                <input type="email" name="email" required placeholder="example@email.com" autofocus>
+                <label>Email</label>
+            </div>
+            <div class="input-group">
+                <input type="password" name="password" required placeholder="********" autofocus>
+                <label>Password</label>
+            </div>
+            <input type="submit" value="Login" class="login-submit">
+        </form>
+        <p>Don't have an account? <a href="{% url 'register_shop' %}">Register here</a></p>
+    </div>
+</div>
+{% endblock %}
