@@ -17,6 +17,7 @@ class Delivery(models.Model):
     delivery_email = models.EmailField(max_length=64)
     password = models.CharField(max_length=255, default='default_password_value')
     is_active = models.BooleanField(default=False)
+    plate_number = models.CharField(max_length=6)
 
     def __str__(self):
         return f"{self.delivery_name}"
