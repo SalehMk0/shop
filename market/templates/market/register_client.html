@@ -1,0 +1,44 @@
+{% extends "market/navbar.html" %}
+{% load static %}
+
+{% block title %}
+Register your Shop!
+{% endblock %}
+
+{% block body %}
+<div class="register-page">
+    <div class="register-image" style="box-shadow: none;">
+        <img  src="{% static 'market/images/cart.png' %}" alt="Register Image">
+    </div>
+    <div class="register-container">
+        <h1>Sign up to Make Orders !</h1>
+        <form action="{% url 'create_client'  %}" method="post">
+            {% csrf_token %}
+            <div class="input-group">
+                <input type="email" name="email" required autofocus>
+                <label>Email</label>
+            </div>
+            <div class="input-group">
+                <input type="text" name="name" required placeholder="John Smith">
+                <label>Full Name</label>
+            </div>
+           
+            <div class="input-group">
+                <input type="tel" name="phone" required pattern="[0-9]{2}[0-9]{3}[0-9]{3}" placeholder="00-000 000">
+                <label>Phone No.</label>
+            </div>
+            <div class="input-group">
+                <input type="text" name="address" required>
+                <label>Detailed Address</label>
+            </div>
+            <div class="input-group">
+                <input type="password" name="password" required minlength="8">
+                <label>Password (minimum 8 characters)</label>
+            </div>
+            <button type="submit">Register</button>
+        </form>
+        
+        <p>Already have an account? <a href="{% url 'login' %}">Login here</a></p>
+    </div>  
+</div>
+{% endblock %}

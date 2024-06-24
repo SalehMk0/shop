@@ -45,7 +45,20 @@ def create_delivery(request):
         return render(request, "market/register_delivery.html")
     
 def register_client(request):
-    pass
+    return render (request, "market/register_client.html")
 
 def custom_404_page(request):
     return render(request, "market/404.html")
+
+def create_client(request):
+    
+    if request.method == 'POST':
+        email = request.POST.get('email')
+        name = request.POST.get('name')
+        phone = request.POST.get('phone')
+        password = request.POST.get('password')
+        address = request.POST.get('address')
+        Client.objects.create(client_name=name,password=password,client_phone=phone,client_email=email, client_address = address)
+        return render(request, "market/signin.html")
+    else:
+        return render(request, "market/register_delivery.html")

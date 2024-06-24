@@ -28,6 +28,7 @@ class Client(models.Model):
     client_email = models.EmailField(max_length=64)
     password = models.CharField(max_length=255, default='default_password_value')
     client_address = models.CharField(max_length=128)
+    
 
     def __str__(self):
         return f"{self.client_name}"

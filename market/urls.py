@@ -11,5 +11,6 @@ urlpatterns = [
     path('register_client',views.register_client, name='register_client'),
     path('create_delivery', views.create_delivery, name='create_delivery'),
     path('404', views.custom_404_page, name='404'),
+    path('create_client', views.create_client, name='create_client'),
     
 ]
