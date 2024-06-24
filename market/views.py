@@ -28,6 +28,7 @@ def create_shop(request):
 
 
 def register_delivery(request):
+    
     return render(request, "market/register_delivery.html")
 
 
