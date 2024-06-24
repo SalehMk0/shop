@@ -27,3 +27,24 @@ def create_shop(request):
 
 
 
+def register_delivery(request):
+    return render(request, "market/register_delivery.html")
+
+
+def create_delivery(request):
+    if request.method == 'POST':
+        email = request.POST.get('email')
+        name = request.POST.get('name')
+        phone = request.POST.get('phone')
+        password = request.POST.get('password')
+        plate_number = request.POST.get('plate_number')
+        Delivery.objects.create(delivery_name=name,password=password,delivery_phone=phone,delivery_email=email,plate_number = plate_number)
+        return render(request, "market/signin.html")
+    else:
+        return render(request, "market/register_delivery.html")
+    
+def register_client(request):
+    pass
+
+def custom_404_page(request):
+    return render(request, "market/404.html")

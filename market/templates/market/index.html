@@ -23,7 +23,8 @@ Shop Now !
             <img src="{% static 'market/images/delivery.png '%}" alt="Icon 1">
             <h2>Delivery</h2>
             <p>Deliver Orders, use your motorbike!</p>
-            <button>Register</button>
+            <a href="{% url 'register_delivery' %}"><button>Register</button></a>
+
         </div>
     </div>
     
@@ -41,7 +42,8 @@ Shop Now !
             <img src="{% static 'market/images/Client.png' %}" alt="Icon 3">
             <h2>Client</h2>
             <p>Let's Shop !</p>
-            <button>Shop Now</button>
+            <a href="{% url 'register_client' %}"><button>Register</button></a>
+
         </div>
     </div>
 </div>
