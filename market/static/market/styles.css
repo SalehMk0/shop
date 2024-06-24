@@ -123,9 +123,12 @@ body {
     color: #0d2e49;
     text-align: center;
     margin: auto;
-    margin-top: 15px;
+    
     
 }
+
+
+
 
 .main-menu {
     display: flex;

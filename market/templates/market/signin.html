@@ -32,8 +32,13 @@ Sign in
             
             <input type="submit" value="Login" class="login-submit">
         </form>
-        <p>Don't have an account? <u><a href="{% url 'register_shop' %}">Register here</a></u></p>
-    </div>
+       
+        <p>Don't have an account yet? 
+           <div class="row"> <a href="{% url 'register_client' %}" style="text-decoration: none;">Client Sign Up</a> |
+            <a href="{% url 'register_delivery' %}" style="text-decoration: none;">Delivery Sign Up</a> |
+            <a href="{% url 'register_shop' %}" style="text-decoration: none;">Shop Sign Up</a></p>
+           </div> 
+</div>
     <div class="image-container" style="position: relative;">
         <img src="{% static 'market/images/login-image.png' %}" alt="First Image" class="first-image">
         <img src="{% static 'market/images/login-img.png' %}" alt="Second Image" class="second-image">
