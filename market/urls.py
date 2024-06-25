@@ -12,5 +12,8 @@ urlpatterns = [
     path('create_delivery', views.create_delivery, name='create_delivery'),
     path('404', views.custom_404_page, name='404'),
     path('create_client', views.create_client, name='create_client'),
+    path('process_login', views.process_login, name='process_login'),
+    path('home', views.home, name='home'),
+    path('logout', views.logout, name='logout'), 
     
 ]

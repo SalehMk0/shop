@@ -1,6 +1,7 @@
 from django.db import models
 
 class Market(models.Model):
+    
     name = models.CharField(max_length=64)
     location = models.CharField(max_length=128)
     phone = models.CharField(max_length=15)

@@ -1,0 +1,12 @@
+{% extends "market/navigation.html" %}
+{% load static %}
+{% block title %}
+Orders
+{% endblock %}
+
+{% block body %}
+{% if user_type == 'delivery' %}
+<h2>Select an Order to pick up</h2>
+<hr>
+{% endif %}
+{% endblock %}
